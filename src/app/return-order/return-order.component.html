@@ -1,0 +1,23 @@
+<div fxLayout fxLayoutAlign="center center">
+
+    <form [formGroup]="returnForm">
+        <mat-card>
+            <div fxLayout fxLayoutAlign="center center">
+                <div class="example-container" fxLayout="column" fxLayoutAlign="space-between">
+                    <h2 mat-subheader>Return Order</h2>
+                    <h5>Reason To return the order</h5>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="please enter reason" formControlName="reason">
+                    </mat-form-field>
+                  
+                  
+                    <div fxLayout fxLayoutAlign="center center">
+                        <button mat-stroked-button type="submit"
+                            (click)="returnOrder()">confirm</button></div>
+
+                </div>
+            </div>
+        </mat-card>
+    </form>
+</div>
+

@@ -1,0 +1,68 @@
+mat-card {
+    width: 30%;
+    margin: 10% auto;
+    border-radius: 8px;
+  }
+  mat-form-field, mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  h1{
+   text-align: center;
+   background-color: whitesmoke;
+  }
+.enireClass {
+  background-color: whitesmoke;
+}
+
+
+
+
+
+  /* stepper */
+  .mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+
+  .registerUser
+  {
+    width: fit-content;
+    margin: 0 auto;
+    border: solid;
+   
+  }
+
+  .header
+  {
+      text-align: center;
+    
+  }
+ 
+/* 
+  mat-card{
+    width: 94%;
+    margin: 3%;
+    margin-top: 9%;
+    background-color: white;
+    height: 100%;
+} */
+mat-horizontal-stepper{
+    background-color: white;
+
+}

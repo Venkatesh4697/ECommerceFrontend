@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<br>
+<h1>My Coupons</h1>
+<br>
+<p>Please click on the coupon id to check further more details related to the coupon</p>
+  <div class="Pannel"  *ngFor="let coupon of allCoupons">
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{coupon.couponId}}
+      </mat-panel-title>
+      <mat-panel-description>
+     Coupon worth: {{coupon.couponAmount}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    coupon Id: {{coupon.couponId}}<br>
+    Coupon worth: {{coupon.couponAmount}}<br>
+   Start Date:{{coupon.validStartDate}}<br>
+   End Date:{{coupon.validEndDate}}<br>
+   Please use the coupon Id when you try to checkout so that the coupon worth is removed from the total of your shopping bag
+  </mat-expansion-panel><br>
+</div>

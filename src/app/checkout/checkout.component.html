@@ -1,0 +1,39 @@
+<app-header></app-header>
+ <div fxLayout fxLayoutAlign="center center">
+
+    <form [formGroup]="addressForm">
+        <mat-card>
+            <div fxLayout fxLayoutAlign="center center">
+                <div class="example-container" fxLayout="column" fxLayoutAlign="space-between">
+                    <h2 mat-subheader>Shipping Address</h2>
+                  <p>Please edit the address if you want to change your default shipping address</p>
+                    <br>
+                     <mat-form-field>
+                        <input matInput placeholder="House Number" formControlName="houseNumber">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="street Name" formControlName="streetName">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="City" formControlName="city">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="State" formControlName="state">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="PinCode" formControlName="pinCode">
+                    </mat-form-field>
+                     <br>
+                  
+                    <div fxLayout fxLayoutAlign="center center">
+                        <button mat-stroked-button type="submit"
+                            (click)="updateUserAddress()">Save</button>
+                            <button mat-stroked-button type="submit"
+                            (click)="proceed()">Next</button>
+                        </div>
+
+                </div>
+            </div>
+        </mat-card>
+    </form>
+</div>

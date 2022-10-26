@@ -1,0 +1,72 @@
+  
+  
+  <p> 
+    <mat-toolbar style="background-color: #FBEEC1">
+     <!-- <button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"> -->
+        <button mat-icon-button [matMenuTriggerFor]="navMenu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #navMenu="matMenu">
+        <button mat-menu-item class="item" [routerLink]="['/home']">Home</button>
+        <button mat-menu-item [routerLink]="['/profile']">Profile</button>
+        <button mat-menu-item [routerLink]="['/orders']">My Active Orders</button>
+        <button mat-menu-item [routerLink]="['/history']">Purchase History</button>
+        <button mat-menu-item [routerLink]="['/receivedOrder']">Received Orders</button>
+        <button mat-menu-item [routerLink]="['/myReturnOrders']">My Return Orders</button>
+        <button mat-menu-item [routerLink]="['/coupons']">Coupons</button>
+        <button mat-menu-item [routerLink]="['/rewards']">Rewards</button>
+      </mat-menu>
+    
+    <span>E-Shop</span>
+    <span class="example-spacer"></span>
+    
+    <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Number</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field> -->
+    
+
+      <!-- <mat-form-field [@visibilityChanged]="isVisible" appearance="standard">
+        <input matInput type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" placeholder="Search">
+        
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+    </mat-autocomplete>
+    </mat-form-field>
+
+
+        <button mat-mini-fab *ngIf="!isVisible" (click)="show()">
+            <mat-icon matSuffix>
+                <i class="material-icons">search</i>
+            </mat-icon>
+        </button>
+        <button mat-mini-fab *ngIf="isVisible" (click)="hidden()">
+            <mat-icon matSuffix>
+                <i class="material-icons">close</i>
+            </mat-icon>
+        </button> -->
+   
+    <button (click)="viewWishList()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button (click)="viewCart()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+     <mat-icon>shopping_cart</mat-icon>
+   </button>
+   <button (click)="logOut()" mat-icon-button>
+    <mat-icon>logout</mat-icon>
+   </button>
+  </mat-toolbar>
+  </p>
+  

@@ -1,0 +1,28 @@
+.demo-table {
+    width: 70%;
+   margin-left: 10%;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  
+  /* mat-expansion-panel
+  {
+    background-color:blanchedalmond
+  } */

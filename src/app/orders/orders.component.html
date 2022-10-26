@@ -1,0 +1,48 @@
+<app-header></app-header>
+<br>
+<h1>My Active Orders</h1>
+<br>
+<p>Please click on the orders to check further more details . If it is empty then you do not have any active orders</p>
+  <!-- <div class="Pannel"  *ngFor="let myOrder of activeOrders"> -->
+      <div class="Pannel"  *ngFor="let myOrder of activeOrders">
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       order Id:- {{myOrder.orderId}}<br>
+       order status:-{{myOrder.orderStatus}}
+      </mat-panel-title>
+     
+       </mat-expansion-panel-header>
+       User Id: {{myOrder.emailId}}<br>
+       Order date: {{myOrder.orderDate}}<br>
+       Order status:{{myOrder.orderStatus}}<br>
+       <div *ngFor="let order of myOrder.orderDetails">
+         EstimatedDeliverDate:-  {{order.estimatedDeliveryDate}}
+           </div>
+       <div *ngFor="let product of myOrder.productsArray">
+    <img src='{{ "assets/images/" +product.productImage}}'
+    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;"/><br>
+  Product Name:- {{product.productName}}
+     </div>
+
+<div>
+   
+          <button mat-raised-button (click)="cancelOrder(myOrder.orderId)">Cancel Order</button>
+          <!-- <button mat-raised-button (click)="returnOrder(myOrder.orderId)">Return Order</button> -->
+      
+      <br><br>
+          <div *ngIf="showReturn">
+              <p>Please enter the reason for return</p>
+           <form  [formGroup]="returnForm">
+           
+            <mat-form-field appearance="fill">
+                <mat-label>Reason For Return</mat-label>
+                <textarea matInput formControlName="reason" placeholder="enter your reason for return"></textarea>
+              </mat-form-field>
+<button mat-raised-button (click)="confirmReturn()">Confirm</button>
+           </form>
+       </div>
+</div>
+  </mat-expansion-panel><br>
+</div>
+

@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<br>
+<h1>My Rewards</h1>
+<br>
+<p>Please click on the Rewards to check further more details related to the rewards</p>
+  <div class="Pannel"  *ngFor="let coupon of allCoupons">
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{coupon.rewardId}}
+      </mat-panel-title>
+      <mat-panel-description>
+     Reward Expires on : {{coupon.expiryDate}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    User Id: {{coupon.emailId}}<br>
+   Reward Id: {{coupon.rewardId}}<br>
+   Reward Amount:{{coupon.amountReward}}<br>
+   Expiry Date:{{coupon.expiryDate}}<br>
+   Please use the reward Id when you try to checkout so that the reward worth is removed from the total of your shopping bag
+  </mat-expansion-panel><br>
+</div>
+

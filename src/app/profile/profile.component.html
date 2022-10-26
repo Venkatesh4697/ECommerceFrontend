@@ -1,0 +1,49 @@
+<app-header></app-header>
+        <div fxLayout fxLayoutAlign="center center">
+
+            <form [formGroup]="profileForm">
+                <mat-card>
+                    <div fxLayout fxLayoutAlign="center center">
+                        <div class="example-container" fxLayout="column" fxLayoutAlign="space-between">
+                            <h2 mat-subheader>Edit Profile</h2>
+                            <mat-form-field>
+                                <input matInput placeholder="First Name" formControlName="firstName" value="user.firstName">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Last Name" formControlName="lastName">
+                            </mat-form-field>
+                            <br>
+                            <mat-form-field>
+                                <input matInput placeholder="Email" formControlName="emailId">
+                            </mat-form-field>
+                            <br>
+                            <mat-form-field>
+                                <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+                            </mat-form-field>
+                            <br>
+                             <mat-form-field>
+                                <input matInput placeholder="House Number" formControlName="houseNumber">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="street Name" formControlName="streetName">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="City" formControlName="city">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="State" formControlName="state">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="PinCode" formControlName="pinCode">
+                            </mat-form-field>
+                             <br>
+                          
+                            <div fxLayout fxLayoutAlign="center center">
+                                <button mat-stroked-button type="submit"
+                                    (click)="updateUser()">Save</button></div>
+
+                        </div>
+                    </div>
+                </mat-card>
+            </form>
+        </div>
